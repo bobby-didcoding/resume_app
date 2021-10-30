@@ -71,9 +71,11 @@ Start Content
             {% for sk in me.userprofile.skills.all %}
             {% if sk.is_key_skill %}
             <div class="keySkillCard">
+              {% if sk.image %}
               <div class="ksIconCol">
                 <img src="{{sk.image.url}}" alt="...">
               </div>
+              {% endif %}
               <span class="ksText">{{sk.name}}</span>
             </div>
             {% endif %}
